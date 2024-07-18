@@ -1,0 +1,9 @@
+{
+    "CrearTabla":"CREATE TABLE if not exists {} ( {} )",
+    "InsertarDatos":"INSERT INTO {} VALUES (NULL, {} )",
+    "VerDatos":"SELECT EXISTS(SELECT 1 FROM {} WHERE {} = {})",
+    "ActualizarDatos":"UPDATE {} SET {}='{}' WHERE {}={}",
+    "EliminarDatos":"DELETE FROM {} WHERE {}={}",
+    "VideoJuego":"ID INTEGER primary key autoincrement, TITULO VARCHAR(20) not null, GENERO TEXT, PRECIO FLOAT, DESARROLLADORA TEXT not null, LANZAMIENTO VARCHAR(20), PERSONAJES INTEGER",
+    "Plataforma": "ID INTEGER primary key, CONSOLA VARCHAR(20) not null, MULTIJUGADOR TEXT, CLASIFICACION TEXT not null, RESOLUCION INTEGER, ALMACENAMIENTO FLOAT, ENLINEA TEXT, foreign key (ID) references ClasePadre(ID)"
+}

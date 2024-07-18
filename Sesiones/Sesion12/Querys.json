@@ -1,0 +1,11 @@
+{
+    "CrearTabla":"CREATE TABLE if not exists {} ( {} )",
+    "InsertarDatos":"INSERT INTO {} VALUES (NULL, {} )",
+    "VerDatos":"SELECT * FROM {} WHERE {}='{}'",
+    "ActualizarDatos":"UPDATE {} SET {} WHERE {}='{}'",
+    "EliminarDatos":"DELETE FROM {} WHERE {}={}",
+    "DatosPersonal":"Id INTEGER primary key autoincrement, Primer_Nombre VARCHAR (15) not null, Segundo_Nombre VARCHAR (15), Primer_Apellido VARCHAR (15) not null, Segundo_Apellido VARCHAR (15), Documento VARCHAR (20) not null UNIQUE, Celular VARCHAR (20), Correo TEXT not null",
+    "DatosEstudio": "Id INTEGER primary key, Carrera TEXT not null, Fecha_Inicio TEXT not null, Fecha_Fin TEXT not null, Horas TEXT not null, foreign key (Id) references Personal(Id)",
+    "DatosHabilidad": "Id INTEGER primary key, Tipo TEXT not null, Descripcion TEXT not null, foreign key (Id) references Personal(Id)",
+    "DatosLaboral":"Id INTEGER primary key, Empresa TEXT not null, Fecha_Inicio TEXT not null, Fecha_Fin TEXT not null, Cargo TEXT not null, Funciones TEXT not null, foreign key (Id) references Personal(Id)"
+}

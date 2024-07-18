@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inicio</title>
+    <link href="{% static 'img/icon.ico' %}" rel="icon" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <section>
+        <a href="{% url 'login' %}"><button>LOGIN</button></a>
+        <a href="{% url 'register' %}"><button>REGISTRO</button></a>
+      </section>
+      <img src="{% static 'img/logo.png' %}" width="90" />
+    </nav>
+    <header id="index">
+      <img src="{% static 'img/poli.png' %}" />
+    </header>
+    <main id="infoIndex">
+      <section id="cuadroInfoP">
+        <p>
+          <strong>Habilidades:</strong>Programación backend y conocimiento básico de Frontend, con algunas bases de interfaces gráficas.
+        </p>
+        <p>
+          <strong>Herramientas:</strong>Java, Python, C++ y JavaScript.
+        </p>
+      </section>
+      <section id="infoPersonal">
+        <img src="{% static 'img/foto.jpg' %}" width="200" />
+        <div>
+          <p>
+            <strong>Nombre:</strong>Juan José
+          </p>
+          <p>
+            <strong>Apellido:</strong>Jaramillo Vera
+          </p>
+          <p>
+            <strong>Cédula:</strong>1007565816
+          </p>
+          <p>
+            <strong>Correo:</strong>juan_jaramillo82222@elpoli.edu.co
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

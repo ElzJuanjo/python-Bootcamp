@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registro</title>
+    <link href="{% static 'img/icon.ico' %}" rel="icon" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <section>
+        <a href="{% url 'index' %}"><button>INICIO</button></a>
+      </section>
+      <img src="{% static 'img/logo.png' %}" width="90" />
+    </nav>
+    <main id="pagRegistro">
+      <section id="formRegistro">
+        <h1>CUARTO ENTREGABLE</h1>
+        <form method="post">
+          {% csrf_token %}
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required />
+          </div>
+          <div>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" required />
+          </div>
+          <div>
+            <label for="correo">Correo:</label>
+            <input type="text" name="correo" required />
+          </div>
+          <div>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" required />
+          </div>
+          <div>
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" required />
+          </div>
+          <div>
+            <label for="clave">Contraseña:</label>
+            <input type="password" name="clave" required />
+          </div>
+          <button type="submit">Registrarse</button>
+        </form>
+        <a href="{% url 'login' %}"><button>Iniciar Sesión</button></a>
+        {% if showError %}
+          <script src="{% static 'js/forms.js' %}"></script>
+          <p id="msgError">{{ mensajeError }}</p>
+        {% endif %}
+      </section>
+      <section>
+        <img src="{% static 'img/perfil.png' %}" id="imgCuenta" />
+        <div id="infoPersonal">
+          <img src="{% static 'img/foto.jpg' %}" width="200" />
+          <div>
+            <p>
+              <strong>Nombre:</strong>Juan José
+            </p>
+            <p>
+              <strong>Apellido:</strong>Jaramillo Vera
+            </p>
+            <p>
+              <strong>Cédula:</strong>1007565816
+            </p>
+            <p>
+              <strong>Correo:</strong>juan_jaramillo82222@elpoli.edu.co
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

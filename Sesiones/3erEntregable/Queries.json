@@ -1,0 +1,10 @@
+{
+    "CrearTabla":"CREATE TABLE if not exists {} ( {} )",
+    "InsertarDatos":"INSERT INTO {} VALUES ( NULL, {} )",
+    "VerDatos":"SELECT EXISTS(SELECT 1 FROM {} WHERE {} = {})",
+    "SeleccionarTodo": "SELECT * FROM {}",
+    "ActualizarDatos":"UPDATE {} SET {}='{}' WHERE {}={}",
+    "EliminarDatos":"DELETE FROM {} WHERE {}={}",
+    "Desarrollador":"ID INTEGER primary key, NOMBRE VARCHAR(30) not null, HABILIDAD VARCHAR(30)",
+    "Proyecto":"ID INTEGER primary key, NOMBRE VARCHAR(30) not null, DEV_ID INTEGER, foreign key (ID) references Developers(DEV_ID)"
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{tittle}}</title>
+    <link href="{% static 'img/icon.ico' %}" rel="icon" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <section>
+        <a href="{% url 'index' %}"><button>INICIO</button></a>
+      </section>
+      <img src="{% static 'img/logo.png' %}" width="90" />
+    </nav>
+    <h1>{{ tittle }}</h1>
+    <main id="infoCategoria">
+      {% for item in items %}
+        <section id="filaInfo">
+          <div id="productCategorias">
+            <a href="{% url 'producto' tabla=tabla id=item.ID %}"><img src="{% static item.IMG %}" width="400" /></a>
+            <div>
+              <p>
+                <strong>Nombre:</strong>{{ item.NOMBRE }}
+              </p>
+              <p>
+                <strong>Precio:</strong>${{ item.PRECIO }}
+              </p>
+              <p>
+                <strong>Categoria:</strong>{{ item.CATEGORIA }}
+              </p>
+            </div>
+          </div>
+        </section>
+      {% endfor %}
+    </main>
+  </body>
+</html>

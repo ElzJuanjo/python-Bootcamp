@@ -1,0 +1,11 @@
+{
+    "CrearTabla":"CREATE TABLE if not exists {} ( {} )",
+    "InsertarDatos":"INSERT INTO {} VALUES ( {} )",
+    "VerDatos":"SELECT EXISTS(SELECT 1 FROM {} WHERE {} = {})",
+    "ActualizarDatos":"UPDATE {} SET {}='{}' WHERE {}={}",
+    "EliminarDatos":"DELETE FROM {} WHERE {}={}",
+    "Hospital":"ID INTEGER primary key, NOMBRE VARCHAR(20) not null, DIRECCION TEXT, TELEFONO VARCHAR(15), ESPECIALIDADES TEXT, DIRECTOR VARCHAR(20), CAPACIDAD INTEGER",
+    "Paciente":"ID INTEGER primary key, NOMBRE VARCHAR(20) not null, APELLIDO VARCHAR(20) not null, DNI VARCHAR(15), FECHA_NACIMIENTO TEXT, GRUPO_SANGUINEO VARCHAR(5), HISTORIA_MEDICO TEXT",
+    "Medico":"ID INTEGER primary key, NOMBRE VARCHAR(20) not null, APELLIDO VARCHAR(20) not null, DNI VARCHAR(15), ESPECIALIDAD TEXT, MATRICULA TEXT, ANIOS_EXPERIENCIA INTEGER",
+    "Consulta":"ID INTEGER primary key, FECHA TEXT not null, PACIENTE VARCHAR(20) not null, HOSPITAL TEXT not null, DIAGNOSTICO TEXT not null"
+}

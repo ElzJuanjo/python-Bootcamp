@@ -1,0 +1,11 @@
+;N° sesión;Contenido por desarrollar;Descripción del trabajo presencial; Descripción trabajo independiente 
+0;1;Introducción a archivos planos;Presentación de la unidad y ejemplos básicos;Lectura recomendada sobre archivos en Python
+1;2;Leer archivos planos;Práctica de lectura de archivos;Ejercicios de lectura de archivos
+2;3;Escribir archivos planos;Práctica de escritura en archivos;Ejercicios de escritura de archivos
+3;4;Manipulación de archivos CSV;Introducción a archivos CSV y práctica;Ejercicios con archivos CSV
+4;5;Uso de librerías para archivos;Introducción a la librería Pandas;Práctica con Pandas
+5;6;Integración de Python con Excel;Demostración de lectura/escritura con Excel;Ejercicios de integración con Excel
+6;7;Repaso general;Repaso de los temas cubiertos;Preparación para el entregable
+7;8;Workshop;Taller práctico de integración de lo aprendido;Desarrollo de un proyecto pequeño
+8;9;Entregable 1;Evaluación del proyecto;Entrega del proyecto
+9;10;Workshop;Taller practico de integracion de lo aprendido;Desarrollo de un proyecto pequeño
